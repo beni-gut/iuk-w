@@ -1,13 +1,54 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE html >
+<html lang="en">
 <head>
-	<meta charset="utf-8">
-	<title>Black Goose Bistro, Pizza on Demand</title>
+	<meta charset="utf-8" >
+	<title>Black Goose Bistro: Pizza-on-Demand, Exercise 9-1</title>
 	<style>
-		
+		ol, ul {list-style-type: none;}
 	</style>
 </head>
 <body>
+	<h1>Black Goose Bistro &vert; Pizza&hyphen;on&hyphen;Demand</h1>
+	<p>Our 12&quot; wood-fired pizzas are available for delivery. Build your custom pizza and we'll deliver it within an hour.</p>
+
+	<form action="https://www.blackgoosebistro.com/pizza.php" method="POST">
+		<p>Your Information</p>
+		<ul>
+			<li>Name:<input type="text" name="customername"></li>
+			<li>Address:<input type="text" name="address"></li>
+			<li>Telephone Number:<input type="tel" name="telephone"></li>
+			<li>Email:<input type="email" name="email"></li>
+			<li>Delivery instructions:<br>
+				<textarea name="instructions" rows="4" cols="60" maxlength="400"></textarea></li>
+			</ul>
+
+		<h2>Design Your Dream Pizza:</h2>
+		<p>Pizza specs</p>
+		<p>Crust <em>(Choose one)</em>:</p>
+		<ul>
+			<li>Classic white</li>
+			<li>Multigrain</li>
+			<li>Cheese-stuffed crust</li>
+			<li>Gluten-free</li>
+		</ul>
+
+		<p>Toppings <em>(Choose as many as you want)</em>:</p>
+		<ul>
+			<li>Red sauce</li>
+			<li>White sauce</li>
+			<li>Mozzarella Cheese</li>
+			<li>Pepperoni</li>
+			<li>Mushrooms</li>
+			<li>Peppers</li>
+			<li>Anchovies</li>
+		</ul>
+
+		<p>Number</p>
+		<p>How many pizzas:</p>
+
+		<p><input type="submit" value="Bring me a pizza&excl;"> 
+			<input type="reset" value="Reset"></p>
+	</form>
 
 </body>
 </html>
