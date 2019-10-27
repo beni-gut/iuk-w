@@ -1,0 +1,23 @@
+body {
+	margin: 0 5%; 
+	font-family: sans-serif;
+}
+h1 {
+	font-size: 3rem;
+	font-family: serif; 
+	font-weight: normal; 
+	border-bottom: 1px solid; 
+	margin-top: 30px;
+}
+h1 small {
+	font-size: 1.75rem;
+}
+h1 + p {
+	font-style: italic;
+}
+h2 {
+	font-size: 2rem;
+}
+dt {
+	margin-top: 5px
+}
