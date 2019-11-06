@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sortieren</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var sortierteZahlen;
+		function sortieren(zahl1, zahl2, zahl3) {
+			if (zahl1 != zahl2 && zahl1 != zahl3 && zahl2 !=zahl3) {
+				if (zahl1 < zahl2) {
+					if (zahl1 < zahl3) {
+						if (zahl2 < zahl3) {
+							sortierteZahlen = [zahl1, zahl2, zahl3];
+						} else {
+							sortierteZahlen = [zahl1, zahl3, zahl2];
+						}
+					} else {
+						sortierteZahlen = [zahl3, zahl1, zahl2];
+					}
+
+				} else if (zahl2 < zahl1) {
+					if (zahl2 < zahl3) {
+						if (zahl1 < zahl3) {
+							sortierteZahlen = [zahl2, zahl1, zahl3];
+						} else {
+							sortierteZahlen = [zahl2, zahl3, zahl1];
+						}
+					} else {
+						sortierteZahlen = [zahl3, zahl2, zahl1];
+					}
+
+				} else if (zahl3 < zahl1) {
+					if (zahl3 < zahl2) {
+						if (zahl1 < zahl2) {
+							sortierteZahlen = [zahl3, zahl1, zahl2];
+						} else {
+							sortierteZahlen = [zahl3, zahl2, zahl1];
+						}
+					} else {
+						sortierteZahlen = [zahl2, zahl3, zahl1];
+					}
+				}
+
+			} else if (zahl1 == zahl2 && zahl1 != zahl3) {
+				if (zahl1 < zahl3) {
+					sortierteZahlen = [zahl1, zahl2, zahl3];
+				} else {
+					sortierteZahlen = [zahl3, zahl1, zahl2];
+				}
+
+			} else if (zahl1 == zahl3 && zahl1 != zahl2) {
+				if (zahl1 < zahl2) {
+					sortierteZahlen = [zahl1, zahl3, zahl2];
+				} else {
+					sortierteZahlen = [zahl2, zahl1, zahl3];
+				}
+
+			} else if (zahl2 == zahl3 && zahl2 != zahl1) {
+				if (zahl2 < zahl1) {
+					sortierteZahlen = [zahl2, zahl3, zahl1];
+				} else {
+					sortierteZahlen = [zahl1, zahl2, zahl3];
+				}
+
+			} else if (zahl1 == zahl2 && zahl1 == zahl3) {
+				sortierteZahlen = [zahl1, zahl2, zahl3];
+			}
+
+
+			for (var i = 0; i < sortierteZahlen.length; i++) {
+				console.log(sortierteZahlen[i]);
+			}
+		}
+
+		const number1 = Number(window.prompt("Insert first number",""));
+		const number2 = Number(window.prompt("Insert second number",""));
+		const number3 = Number(window.prompt("Insert third number",""));
+		sortieren(number1,number2,number3);
+		alert(sortierteZahlen);
+	</script>
+</body>
+</html>

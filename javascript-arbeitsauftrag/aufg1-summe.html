@@ -9,13 +9,12 @@
 		function gaussSumme (zahl) {
 			if (zahl < 0) {
 				alert("Kleiner als null");
-				//var ergebnis = -(zahl * (zahl - 1) / 2);
-				//alert(ergebnis);
+				//return -(zahl * (zahl - 1) / 2);
 			} else {
-				var ergebnis = (zahl * (zahl + 1) / 2);
-				alert(ergebnis);
+				return (zahl * (zahl + 1) / 2);
 			}
 		}
+		alert("Gauss von 1000: " + gaussSumme(1000));
 	</script>
 </body>
 </html>
