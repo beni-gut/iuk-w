@@ -27,14 +27,13 @@
 
 		<div class="container">
 			<!-- Arbeitsauftrag-->  
-			<form class="needs-validation" novalidate>
+			<!-- form method="POST"  funktioniert ohne das-->
 				<div class="form-group">
-					<input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Benutzername" required>
+					<input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Benutzername">
 					<small id="usernameHelp" class="form-text text-muted">Der Benutzername muss aus mindestens drei Zeichen bestehen.</small>
 				</div>
 
-				<button type="submit" class="btn btn-primary" disabled="true" id="loginbutton" onclick="weiterLeiten()">Login</button>
-			</form>
+				<button id="loginbutton" type="submit" class="btn btn-primary" disabled onclick="weiterleitenPartner()">Login</button>
 		</div>
 
 	</main>
@@ -44,49 +43,8 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> 
 
-	<!-- bootstrap JS -->
-	<script type="text/javascript">
-		(function() {
-			'use strict';
-			window.addEventListener('load', function() {
-				// Fetch all the forms we want to apply custom Bootstrap validation styles to
-				var forms = document.getElementsByClassName('needs-validation');
-				// Loop over them and prevent submission
-				var validation = Array.prototype.filter.call(forms, function(form) {
-					form.addEventListener('submit', function(event) {
-						if (form.checkValidity() === false && document.getElementById('inlineFormInputGroup').value.length >= 3) {
-							event.preventDefault();
-							event.stopPropagation();
-						}
-						form.classList.add('was-validated');
-					}, false);
-				});
-			}, false);
-		})();
-	</script>
-
 	<!-- My JavaScript -->
-	<script type="text/javascript">
-		var form = document.getElementById("inlineFormInputGroup");
-		form.addEventListener("change", buttonFreischalten);
-
-		var button = document.getElementById("loginbutton");
-		
-		function buttonFreischalten() {
-			if (form.value.length >= 3) {
-				button.disabled = false;
-			} else {
-				button.disabled = true;
-			}
-		};
-
-		function weiterLeiten() {
-			location.href = "list.html";
-		}
-	</script>
-
 	<script src="script.js"></script>
-
 
 </body>
 </html>
