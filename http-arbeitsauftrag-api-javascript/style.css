@@ -5,3 +5,7 @@ body {
 .col-sm {
 	padding-bottom: 15px;
 }
+
+.card {
+	width: 20rem;
+}
