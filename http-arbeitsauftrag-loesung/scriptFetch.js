@@ -1,21 +1,21 @@
 function loadPeople() {
-	let client = new XMLHttpRequest();
-	let method = 'GET';
 	let url = "https://swapi.co/api/people";
 
-	client.onload = function() {
-		if(this.status == 200 && this.responseText != null) {
+	fetch(url, {method: 'GET'}).then(response => {
+		if(this.status !== 200 && this.responseText != null) {
+			console.log('Looks like there was a problem. Status Code: '+response.status);
+			return;
+		}
+		response.json().then(function(data) {
 			let jsonResponse = JSON.parse(this.responseText);
 			let characters = jsonResponse.results;
 			characters.forEach(function(character) {
 				let card = createCard(character);
 				document.getElementById("people").appendChild(card);
+				alert("im here");
 			});
-		}
-	}
-
-	client.open(method, url);
-	client.send();
+		});
+	});
 }
 
 function createCard(character) {
