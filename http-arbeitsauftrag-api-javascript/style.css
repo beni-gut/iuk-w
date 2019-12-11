@@ -1,5 +1,5 @@
 body {
-  padding-top: 1.5rem;
+	padding-top: 1.5rem;
 }
 
 .col-sm {
@@ -8,4 +8,16 @@ body {
 
 .card {
 	width: 20rem;
+}
+
+.btn {
+	margin: .1em;
+}
+
+.smolTitles {
+	font-size: 1em;
+}
+
+ul {
+	margin: 0;
 }
